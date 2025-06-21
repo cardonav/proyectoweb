@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Diseño de Uñas</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('logo.jpeg') center center no-repeat;
+            background-size: contain;
+            background-attachment: fixed;
+        }
+        .container {
+            background: rgba(97, 94, 94, 0.85);
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(17, 15, 15, 0.2);
+        }
+        h1 {
+            text-align: center;
+            color: #131313;
+        }
+        .nail-designs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .nail {
+            width: 80px;
+            height: 120px;
+            border-radius: 40px 40px 60px 60px;
+            border: 2px solid #81767a;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            cursor: pointer;
+            transition: box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(32, 16, 16, 0.1);
+            position: relative;
+            background-size: cover;
+            background-position: center;
+        }
+        .nail[data-index="1"] {
+            background-image: url('semipermanente.jpg');
+        }
+        .nail[data-index="2"] {
+            background-image: url('poligel.jpg');
+        }
+        .nail[data-index="3"] {
+            background-image: url('sofgel.jpg');
+        }
+        .nail[data-index="4"] {
+            background-image: url('acrilico5.jpg');
+        }
+        .nail img {
+            position: absolute;
+            bottom: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            pointer-events: none;
+        }
+        .nail.selected {
+            box-shadow: 0 0 0 4px #5d5b5c;
+        }
+        .color-picker {
+            display: flex;
+            justify-content: center;
+            margin-top: 25px;
+            gap: 15px;
+        }
+        .color-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 2px solid #625f60;
+            cursor: pointer;
+            outline: none;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <h1>Diseño de Uñas</h1>
+        <div class="nail-designs" id="nailDesigns">
+            <div class="nail" data-index="1"></div>
+            <div class="nail" data-index="2"></div>
+            <div class="nail" data-index="3"></div>
+            <div class="nail" data-index="4"></div>
+        </div>
+<!-- Imagen de fondo decorativa -->
+<img src="semi.jpg" alt="Fondo de uñas" style="display:none;">
+        <div class="color-picker">
+           
+            </button>
+            <button class="color-btn" data-color="rgba(0,255,0,0.5)" style="background: rgba(63, 62, 62, 0.3); border-radius: 6px; width: auto; height: 32px; padding: 0 16px; color: #f1eef0;" onclick="window.open('poligel.html', '_blank')">
+            POLYGEL
+            </button>
+            <button class="color-btn" style="background: rgba(63, 62, 62, 0.3); border-radius: 6px; width: auto; height: 32px; padding: 0 16px; color: #f1eef0;" onclick="window.open('softgel.html', '_blank')">
+            SOFT GEL
+            </button>
+            <button class="color-btn" data-color="rgba(255,255,0,0.5)" style="background: rgba(63, 62, 62, 0.3); border-radius: 6px; width: auto; height: 32px; padding: 0 16px; color: #f1eef0;" onclick="window.open('semipermanente.html', '_blank')">
+            SEMI PERMANENTE
+            </button>
+            <button class="color-btn" data-color="rgba(255,0,255,0.5)" style="background: rgba(63, 62, 62, 0.3); border-radius: 6px; width: auto; height: 32px; padding: 0 16px; color: #f1eef0;" onclick="window.open('acrilico.html', '_blank')">
+            ACRILICO
+            </button>
+        </div>
+       
+    </div>
+    <script>
+        // Selección de uñas
+        const nails = document.querySelectorAll('.nail');
+        let selectedNail = null;
+
+        nails.forEach(nail => {
+            nail.addEventListener('click', () => {
+                nails.forEach(n => n.classList.remove('selected'));
+                nail.classList.add('selected');
+                selectedNail = nail;
+            });
+        });
+
+        // Selección de color
+        const colorBtns = document.querySelectorAll('.color-btn');
+        colorBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (selectedNail) {
+                    selectedNail.style.background = btn.dataset.color;
+                } else {
+                    alert('Selecciona una uña primero.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
