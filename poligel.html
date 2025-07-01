@@ -110,11 +110,28 @@
             </a>
         </div>
     </section>
-    <div style="text-align:center; margin: 40px 0 0 0;">
+    <div style="text-align:center; margin: 5% 0 0 0;">
         <a href="index.html" style="display:inline-block; background:#141112; color:#fff; padding:10px 24px; border-radius:8px; text-decoration:none; font-weight:bold; transition:background 0.2s;">Volver a Inicio</a>
     </div>
     <footer>
         &copy; 2025 Diseños de Uñas Poligel. Inspiración para tu belleza.
     </footer>
+    <script>
+         const botonRegresar = document.createElement('button');
+            botonRegresar.textContent = 'Regresar al Inicio';
+            botonRegresar.style.display = 'block';
+            botonRegresar.style.margin = '40px auto 0 auto';
+            botonRegresar.style.padding = '12px 28px';
+            botonRegresar.style.background = '#000'; // Fondo negro
+            botonRegresar.style.color = '#fff'; // Letras blancas
+            botonRegresar.style.border = 'none';
+            botonRegresar.style.borderRadius = '6px';
+            botonRegresar.style.fontSize = '1.1em';
+            botonRegresar.style.cursor = 'pointer';
+            botonRegresar.addEventListener('click', function() {
+                window.location.href = 'index.html';
+            });
+            document.querySelector('main').appendChild(botonRegresar);
+    </script>
 </body>
 </html>
