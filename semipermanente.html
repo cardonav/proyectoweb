@@ -2,128 +2,132 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Diseños de Uñas Semipermanentes</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uñas semipermanente</title>
     <style>
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #18151f;
+            font-family: Arial, sans-serif;
+            background: url('logo.jpeg') no-repeat center center fixed;
+            background-size: cover;
             margin: 0;
             padding: 0;
-            min-height: 100vh;
-            background-image: url('logo.jpeg'); /* Cambia por tu imagen */
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: url('logo.jpeg') no-repeat center center;
+            background-size: 300px auto;
+            opacity: 0.15;
+            z-index: 0;
+            pointer-events: none;
+        }
+        main, header {
+            position: relative;
+            z-index: 1;
         }
         header {
-            background: rgba(30, 20, 40, 0.85);
-            color: #fff;
-            padding: 1.5rem 0;
+            background: #171616;
+            color: rgb(142, 136, 136);
+            padding: 20px 0;
             text-align: center;
-            letter-spacing: 2px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
         }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2rem;
-            padding: 2rem;
-            max-width: 1200px;
-            margin: auto;
+        main {
+            max-width: 800px;
+            margin: 30px auto;
+            background: rgba(158, 146, 146, 0.7); /* Traslúcido */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #e7548040;
+            backdrop-filter: blur(4px);
         }
-        .design-card {
-            background: rgba(30, 20, 40, 0.65);
-            border-radius: 12px;
-            box-shadow: 0 2px 16px rgba(0,0,0,0.25);
-            overflow: hidden;
-            transition: transform 0.2s, box-shadow 0.2s;
-            backdrop-filter: blur(2px);
+        h2 {
+            color: #dfd2d2;
         }
-        .design-card:hover {
-            transform: translateY(-5px) scale(1.03);
-            box-shadow: 0 4px 24px rgba(231,84,128,0.18);
+        .galeria {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
-        .design-card img {
-            width: 100%;
-            height: 180px;
+        .galeria img {
+            width: 150px;
+            height: 150px;
             object-fit: cover;
-            display: block;
-            opacity: 0.92;
+            border-radius: 8px;
+            border: 2px solid #5c5a5a;
         }
-        .design-info {
-            padding: 1rem;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
         }
-        .design-title {
-            font-size: 1.1rem;
-            color: #4a4849;
-            margin: 0 0 0.5rem 0;
+        th, td {
+            border: 1px solid #7c7677;
+            padding: 10px;
+            text-align: center;
         }
-        .design-desc {
-            font-size: 0.95rem;
-            color: #ccc;
-        }
-        @media (max-width: 600px) {
-            .gallery {
-                padding: 1rem;
-                gap: 1rem;
-            }
-            .design-card img {
-                height: 120px;
-            }
-        }
-        a {
-            color: #6a6768;
-            text-decoration: none;
-        }
-        a:hover {
-            color: #fff;
+        th {
+            background: #111111;
         }
     </style>
 </head>
-<body id="top">
+<body>
     <header>
-        <h1>Diseños de Uñas Semipermanentes</h1>
-        <p>Inspírate con estos estilos modernos y elegantes</p>
+        <h1>UÑAS SEMIPERMANENTE</h1>
+        
     </header>
     <main>
-        <section class="gallery">
-            <div class="design-card">
-                <a href="https://wa.me/+573247655516?text=Me%20interesa%20el%20Dise%C3%B1o%20Rosa%20Pastel%20de%20u%C3%B1as%20semipermanentes%20que%20vi%20en%20https://tusitio.com/semipermanente.html%20(semi.jpg)" target="_blank">
-                    <img src="semi.jpg" alt="Diseño Rosa Pastel">
-                </a>
-                <div class="design-info"></div>
-            </div>
-            <div class="design-card">
-                <a href="https://wa.me/+573247655516?text=Me%20interesa%20el%20Dise%C3%B1o%20Francesa%20Moderna%20de%20u%C3%B1as%20semipermanentes%20que%20vi%20en%20https://tusitio.com/semipermanente.html%20(semipermanente1.jpg)" target="_blank">
-                    <img src="semipermanente1.jpg" alt="Diseño Francesa Moderna">
-                </a>
-                <div class="design-info"></div>
-            </div>
-            <div class="design-card">
-                <a href="https://wa.me/+573247655516?text=Me%20interesa%20el%20Dise%C3%B1o%20Minimalista%20de%20u%C3%B1as%20semipermanentes%20que%20vi%20en%20https://tusitio.com/semipermanente.html%20(semipermanente2.jpg)" target="_blank">
-                    <img src="semipermanente2.jpg" alt="Diseño Minimalista">
-                </a>
-                <div class="design-info"></div>
-            </div>
-            <div class="design-card">
-                <a href="https://wa.me/+573247655516?text=Me%20interesa%20el%20Dise%C3%B1o%20Floral%20de%20u%C3%B1as%20semipermanentes%20que%20vi%20en%20https://tusitio.com/semipermanente.html%20(semipermanente3.jpg)" target="_blank">
-                    <img src="semipermanente3.jpg" alt="Diseño Floral">
-                </a>
-                <div class="design-info"></div>
-            </div>
-            <div class="design-card">
-                <a href="https://wa.me/+573247655516?text=Me%20interesa%20el%20Dise%C3%B1o%20Floral%20de%20u%C3%B1as%20semipermanentes%20que%20vi%20en%20https://tusitio.com/semipermanente.html%20(semipermanente4.jpg)" target="_blank">
-                    <img src="semipermanente4.jpg" alt="Diseño Floral">
-                </a>
-                <div class="design-info"></div>
-            </div>
-        </section>
-        <div style="width:100%; text-align:center; margin: 5% 0 4% 0;">
-            <a href="index.html" style="display:inline-block; padding:12px 28px; background:rgba(30,20,40,0.7); color:#efeced; border-radius:8px; text-decoration:none; font-weight:bold; font-size:16px; box-shadow:0 2px 8px rgba(0,0,0,0.18); transition:background 0.2s; backdrop-filter: blur(2px);">
-                Volver al Inicio
+     
+        <div class="galeria" id="galeria">
+            <a href="https://wa.me/+573247655516?text=Hola,%20me%20interesa%20el%20Dise%C3%B1o%201%20(acrilico0.jpg)" target="_blank" title="Contactar por WhatsApp sobre Diseño 1">
+            <img src="semi.jpg" alt="Diseño 1" data-img="acrilico0.jpg">
+            </a>
+            <a href="https://wa.me/+573247655516?text=Hola,%20me%20interesa%20el%20Dise%C3%B1o%202%20(acrilico1.jpg)" target="_blank" title="Contactar por WhatsApp sobre Diseño 2">
+            <img src="semipermanente.jpg" alt="Diseño 2" data-img="acrilico1.jpg">
+            </a>
+            <a href="https://wa.me/+573247655516?text=Hola,%20me%20interesa%20el%20Dise%C3%B1o%203%20(acrilico2.jpg)" target="_blank" title="Contactar por WhatsApp sobre Diseño 3">
+            <img src="semipermanente1.jpg" alt="Diseño 3" data-img="acrilico2.jpg">
+            </a>
+            <a href="https://wa.me/+573247655516?text=Hola,%20me%20interesa%20el%20Dise%C3%B1o%204%20(acrilico3.jpg)" target="_blank" title="Contactar por WhatsApp sobre Diseño 4">
+            <img src="semipermanente2.jpg" alt="Diseño 4" data-img="acrilico3.jpg">
+            </a>
+            <a href="https://wa.me/+573247655516?text=Hola,%20me%20interesa%20el%20Dise%C3%B1o%205%20(acrilico4.jpg)" target="_blank" title="Contactar por WhatsApp sobre Diseño 5">
+            <img src="semipermanente3.jpg" alt="Diseño 5" data-img="acrilico4.jpg">
+            </a>
+            <a href="https://wa.me/+573247655516?text=Hola,%20me%20interesa%20el%20Dise%C3%B1o%206%20(acrilico5.jpg)" target="_blank" title="Contactar por WhatsApp sobre Diseño 6">
+            <img src="semipermanente4.jpg" alt="Diseño 6" data-img="acrilico5.jpg">
             </a>
         </div>
-    </main>
+        <script>
+            document.querySelectorAll('.galeria img').forEach(function(img, idx) {
+                img.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var numero = idx + 1;
+                    var imagen = img.getAttribute('data-img');
+                    var url = 'https://wa.me/+573247655516?text=Hola,%20me%20interesa%20el%20Dise%C3%B1o%20' + numero + '%20(' + encodeURIComponent(imagen) + ')';
+                    window.open(url, '_blank');
+                });
+            });
+            const botonRegresar = document.createElement('button');
+            botonRegresar.textContent = 'Regresar al Inicio';
+            botonRegresar.style.display = 'block';
+            botonRegresar.style.margin = '40px auto 0 auto';
+            botonRegresar.style.padding = '12px 28px';
+            botonRegresar.style.background = '#000'; // Fondo negro
+            botonRegresar.style.color = '#fff'; // Letras blancas
+            botonRegresar.style.border = 'none';
+            botonRegresar.style.borderRadius = '6px';
+            botonRegresar.style.fontSize = '1.1em';
+            botonRegresar.style.cursor = 'pointer';
+            botonRegresar.addEventListener('click', function() {
+                window.location.href = 'index.html';
+            });
+            document.querySelector('main').appendChild(botonRegresar);
+        </script>
+</main>
 </body>
 </html>

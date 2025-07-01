@@ -2,119 +2,126 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Observa Diseños de Uñas</title>
+    <title>Uñas sofgel</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: #090909 url('logo.jpeg') no-repeat center center fixed;
+            background: url('logo.jpeg') no-repeat center center fixed;
             background-size: cover;
             margin: 0;
             padding: 0;
+            position: relative;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: url('logo.jpeg') no-repeat center center;
+            background-size: 300px auto;
+            opacity: 0.15;
+            z-index: 0;
+            pointer-events: none;
+        }
+        main, header {
+            position: relative;
+            z-index: 1;
         }
         header {
-            background: rgba(24, 20, 28, 0.85);
-            color: #fff;
+            background: #171616;
+            color: rgb(142, 136, 136);
             padding: 20px 0;
             text-align: center;
-            backdrop-filter: blur(2px);
         }
-        h1 {
-            margin: 0;
+        main {
+            max-width: 800px;
+            margin: 30px auto;
+            background: rgba(158, 146, 146, 0.7); /* Traslúcido */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px #e7548040;
+            backdrop-filter: blur(4px);
         }
-        .gallery {
+        h2 {
+            color: #dfd2d2;
+        }
+        .galeria {
             display: flex;
+            gap: 15px;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 24px;
-            padding: 30px;
         }
-        .nail-design {
-            background: rgba(40, 40, 40, 0.55);
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(231, 84, 128, 0.15);
-            overflow: hidden;
-            width: 220px;
-            text-align: center;
-            transition: transform 0.2s, background 0.2s;
-            backdrop-filter: blur(2px);
-        }
-        .nail-design:hover {
-            transform: scale(1.04);
-            background: rgba(60, 60, 60, 0.7);
-        }
-        .nail-design img {
-            width: 100%;
-            height: 180px;
+        .galeria img {
+            width: 150px;
+            height: 150px;
             object-fit: cover;
-            opacity: 0.93;
+            border-radius: 8px;
+            border: 2px solid #5c5a5a;
         }
-        .nail-design p {
-            margin: 12px;
-            color: #e0dddf;
-            font-weight: bold;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
         }
-        a {
-            color: #fff;
-            text-decoration: none;
+        th, td {
+            border: 1px solid #7c7677;
+            padding: 10px;
+            text-align: center;
         }
-        a:hover {
-            color: #fcf6f8;
-        }
-        .volver {
-            width:100%; 
-            text-align:center; 
-            margin: 40px 0 30px 0;
-        }
-        .volver a {
-            display:inline-block; 
-            padding:12px 28px; 
-            background: rgba(24, 20, 28, 0.7); 
-            color:#fff; 
-            border-radius:8px; 
-            text-decoration:none; 
-            font-weight:bold; 
-            font-size:16px; 
-            box-shadow:0 2px 8px rgba(231,84,128,0.15); 
-            transition:background 0.2s;
-            backdrop-filter: blur(2px);
-        }
-        .volver a:hover {
-            background: rgba(157, 154, 155, 0.9);
-            color: #f9f4f6;
+        th {
+            background: #111111;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Observa Diseños de Uñas</h1>
-        <p>Inspírate con estos hermosos estilos</p>
+        <h1>UÑAS SOFGEL</h1>
+        
     </header>
-    <section class="gallery">
-        <div class="nail-design">
-            <a href="https://wa.me/+573247655516?text=¡Mira%20este%20diseño%20de%20uñas!%20https://tu-dominio.com/sofgel.jpg" target="_blank">
-            <img src="sofgel.jpg" alt="Diseño de uñas sofgel">
+    <main>
+     
+        <div class="galeria" id="galeria">
+            <a href="https://wa.me/+573247655516?text=Hola,%20me%20interesa%20el%20Dise%C3%B1o%201%20(acrilico0.jpg)" target="_blank" title="Contactar por WhatsApp sobre Diseño 1">
+            <img src="sofgel.jpg" alt="Diseño 1" data-img="acrilico0.jpg">
+            </a>
+            <a href="https://wa.me/+573247655516?text=Hola,%20me%20interesa%20el%20Dise%C3%B1o%202%20(acrilico1.jpg)" target="_blank" title="Contactar por WhatsApp sobre Diseño 2">
+            <img src="sofgel1.jpg" alt="Diseño 2" data-img="acrilico1.jpg">
+            </a>
+            <a href="https://wa.me/+573247655516?text=Hola,%20me%20interesa%20el%20Dise%C3%B1o%203%20(acrilico2.jpg)" target="_blank" title="Contactar por WhatsApp sobre Diseño 3">
+            <img src="softgel.jpeg" alt="Diseño 3" data-img="acrilico2.jpg">
+            </a>
+            <a href="https://wa.me/+573247655516?text=Hola,%20me%20interesa%20el%20Dise%C3%B1o%204%20(acrilico3.jpg)" target="_blank" title="Contactar por WhatsApp sobre Diseño 4">
+            <img src="softgel1.jpeg" alt="Diseño 4" data-img="acrilico3.jpg">
             </a>
         </div>
-        <div class="nail-design">
-            <a href="https://wa.me/+573247655516?text=¡Mira%20este%20diseño%20de%20uñas!%20https://tu-dominio.com/sofgel1.jpg" target="_blank">
-            <img src="sofgel1.jpg" alt=" de uñas geométrico">
-            </a>
-        </div>
-        <div class="nail-design">
-            <a href="https://wa.me/+573247655516?text=¡Mira%20este%20diseño%20de%20uñas!%20https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" target="_blank">
-            <img src="softgel.jpeg" alt="Diseño de uñas minimalista">
-            </a>
-        </div>
-        <div class="nail-design">
-            <a href="https://wa.me/+573247655516?text=¡Mira%20este%20diseño%20de%20uñas!%20https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" target="_blank">
-            <img src="softgel1.jpeg" alt="Diseño de uñas brillante">
-            </a>
-        </div>
-    </section>
-    <div style="width:100%; text-align:center; margin: 5% 0 4% 0;">
-            <a href="index.html" style="display:inline-block; padding:12px 28px; background:rgba(30,20,40,0.7); color:#efeced; border-radius:8px; text-decoration:none; font-weight:bold; font-size:16px; box-shadow:0 2px 8px rgba(0,0,0,0.18); transition:background 0.2s; backdrop-filter: blur(2px);">
-                Volver al Inicio
-        </a>
-    </div>
+        <script>
+            document.querySelectorAll('.galeria img').forEach(function(img, idx) {
+                img.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var numero = idx + 1;
+                    var imagen = img.getAttribute('data-img');
+                    var url = 'https://wa.me/+573247655516?text=Hola,%20me%20interesa%20el%20Dise%C3%B1o%20' + numero + '%20(' + encodeURIComponent(imagen) + ')';
+                    window.open(url, '_blank');
+                });
+            });
+            const botonRegresar = document.createElement('button');
+            botonRegresar.textContent = 'Regresar al Inicio';
+            botonRegresar.style.display = 'block';
+            botonRegresar.style.margin = '40px auto 0 auto';
+            botonRegresar.style.padding = '12px 28px';
+            botonRegresar.style.background = '#000'; // Fondo negro
+            botonRegresar.style.color = '#fff'; // Letras blancas
+            botonRegresar.style.border = 'none';
+            botonRegresar.style.borderRadius = '6px';
+            botonRegresar.style.fontSize = '1.1em';
+            botonRegresar.style.cursor = 'pointer';
+            botonRegresar.addEventListener('click', function() {
+                window.location.href = 'index.html';
+            });
+            document.querySelector('main').appendChild(botonRegresar);
+        </script>
+</main>
 </body>
 </html>
